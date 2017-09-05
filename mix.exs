@@ -38,7 +38,7 @@ defmodule Starter.Mixfile do
   end
   def application(_target) do
     [mod: {Starter.Application, []},
-     extra_applications: [:logger]]
+     extra_applications: [:logger, :runtime_tools]]
   end
 
   # Dependencies can be Hex packages:
