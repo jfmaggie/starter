@@ -60,7 +60,8 @@ defmodule Starter.Mixfile do
   def deps(target) do
     [
       {:bootloader, "~> 0.1"},
-      {:nerves_runtime, "~> 0.4"}
+      {:nerves_runtime, "~> 0.4"},
+      {:nerves_init_gadget, "~> 0.1"}
     ] ++ system(target)
   end
 

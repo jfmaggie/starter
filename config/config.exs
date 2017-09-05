@@ -17,8 +17,13 @@ use Mix.Config
 # docs for separating out critical OTP applications such as those
 # involved with firmware updates.
 config :bootloader,
-  init: [:nerves_runtime],
+  init: [:nerves_runtime, :nerves_init_gadget],
   app: :starter
+
+config :nerves_firmware_ssh,
+  authorized_keys: [
+    File.read!(Path.join(System.user_home!,
+                         ".ssh/id_rsa.pub"))]
 
 # Import target specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
